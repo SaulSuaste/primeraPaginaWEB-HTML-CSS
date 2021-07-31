@@ -10,13 +10,17 @@
     <title>Primera pagina WEB</title>
 </head>
 <body>
+    <div class="boton-flotante">
+        <a href="#nav-inicio">Ir a Inicio</a>
+    </div>
     <header>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+        <nav id="nav-inicio">
+            <a href="#nav-inicio">Inicio</a>
+            <a href="#nav-productos">Productos</a>
+            <a href="#nav-portafolio">Portafolio</a>
+            <a href="#nav-clientes">Clientes</a>
+            <a href="#nav-servicios">servicios</a>
+            <a href="#nav-contacto">Contacto</a>
         </nav>
 
         <section class="textos-header">
@@ -27,7 +31,7 @@
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.18,21.30 C111.85,192.79 408.03,-97.62 542.03,98.63 L499.43,150.67 L0.00,150.67 Z" style="stroke: none; fill: #fff;"></path></svg></div>
     </header>
 
-    <main>
+    <main id="nav-productos">
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">Nuestro producto</h2>
             <div class="contenedor-sobre-nosotros">
@@ -43,7 +47,7 @@
             </div>
         </section>
 
-        <section class="portafolio">
+        <section class="portafolio" id="nav-portafolio">
             <div class="portafolio-contenedor">
                 <h2 class="titulo">Portafolio</h2>
                 <div class="galeria-port">
@@ -99,7 +103,7 @@
         </section>
 
 
-        <section class="clientes contenedor">
+        <section class="clientes contenedor" id="nav-clientes">
             <h2 class="titulo">Que dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card">
@@ -121,7 +125,7 @@
         </section>
 
 
-        <section class="about-services">
+        <section class="about-services" id="nav-servicios">
             <div class="contenedor">
                 <h2 class="titulo">Nuestros servicios</h2>
                 <div class="servicio-contenedor">
@@ -147,7 +151,7 @@
         </section>
 
 
-        <footer>
+        <footer id="nav-contacto">
             <div class="contenedor-footer">
                 <div class="contenido-foo">
                     <h4>Telefono</h4>

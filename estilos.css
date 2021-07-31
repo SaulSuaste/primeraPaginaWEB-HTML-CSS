@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /*realizar lento el desplazamiento, va para todo el body*/
 }
 body{
     font-family: sans-serif;
@@ -313,6 +314,39 @@ footer{
     color: #301eff;
 }
 
+
+/*****************************************************************
+                        Boton flotante
+/*****************************************************************/
+
+.boton-flotante{
+    background: #4DC7FF;
+    opacity: 0.9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 10;
+    margin: 30px;
+    right: 0;
+    bottom: 0;
+
+}
+
+.boton-flotante a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    
+}
+
+
+
+
 /*****************************************************************
                         RESPONSIVE DESIGN
 /*****************************************************************/
@@ -449,4 +483,19 @@ footer{
     .titulo-final{
         font-size: 20px;
     }
+
+
+    /* BOTON FLOTANTE */
+
+    .boton-flotante{
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+    
+    .boton-flotante a{
+        font-size: 10px;
+    }
+
+
 }
