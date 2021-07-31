@@ -64,7 +64,7 @@ header .textos-header{
     align-items: center; /*alinea verticalmente los elementos*/
     justify-content: center; /*alinea horizontalmente los elementos*/
     flex-direction: column; /*los acomoda en una columna*/
-    /* text-align: center; */
+    text-align: center;
 }
 
 .textos-header h1{
@@ -90,6 +90,9 @@ header .textos-header{
                             SOBRE NOSOTROS
 /*****************************************************************/
 
+main .sobre-nosotros{
+    padding: 10px 0 60px 0;
+}
 .contenedor-sobre-nosotros{
     display: flex; /*Seran elementos flexibles*/
     justify-content:space-evenly; /*Reparta el espacio*/
@@ -190,7 +193,7 @@ header .textos-header{
 
 
 /*****************************************************************
-                            CLIETES
+                            CLIENTES
 /*****************************************************************/
 
 .cards{
@@ -308,4 +311,142 @@ footer{
     font-size: 24px;
     margin: 20px 0 0 0;
     color: #301eff;
+}
+
+/*****************************************************************
+                        RESPONSIVE DESIGN
+/*****************************************************************/
+
+@media screen and (max-width:900px) {
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column; /*se acomodara todo en una columna*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .img-sobre-nosotros{
+        width: 90%;
+    }
+
+    /* GALERIA */
+    .imagen-port{
+        width: 44%;
+    }
+
+    
+    /* Clientes */
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* Servicios */
+    .servicio-contenedor{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .servicio-individual{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-individual:nth-child(1), .servicio-individual:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-individual img{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 25px;
+    }
+
+    .textos-header h2{
+        font-size: 15px;
+    }
+
+
+    /* Acerca de nosotros */
+    .img-sobre-nosotros{
+        margin-bottom: 60px;
+        width: 98%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* GALERIA */
+
+    .imagen-port{
+        width: 90%;
+    }
+
+    /* Clientes */
+    .cards .card{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .cards .card .contenido-texto-card{
+        width: 90%;
+    }
+
+
+    /* Contacto */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .contenido-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contenido-foo h4{
+        border: none;
+    }
+
+    .contenido-foo p{
+        border-bottom: 1px solid #4DC7FF;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
 }
