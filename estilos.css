@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;/*para centrar los contenedores*/
+    overflow: hidden; /*oculta lo que se desborda */
+}
+
+.titulo{
+    color: #090165;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*****************************************************************
+                               HEADER
+/*****************************************************************/
+
+header{
+    width: 100%;
+    height: 600px;
+
+    background: #9CECFB;  /* fallback for old browsers */
+    /* Se modificaron las transparencias para poder ver la imagen de pordada que se agrego*/
+    background: -webkit-linear-gradient(to right, #0051d49e, #65c6f781, #1f707e7e), url(imagenes/portada.jpg); 
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0051d49e, #65c6f781, #1f707e7e), url(imagenes/portada.jpg); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: cover; /*la imagen abarcara el tamaño del contenedor*/
+    background-attachment: fixed; /*La imagen se queda fija al desplazar*/
+    position: relative; /*consrva su espacio en el DOM*/
+}
+
+nav{
+    text-align: right;/*alinear los elementos del nav a la derecha*/
+    padding: 20px 40px 0 0; /*padding arriba y la derecha*/
+}
+
+nav a{
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none; /*quite subrayado*/
+    margin-right: 10px; /*para separarlos*/
+}
+
+nav a:hover{
+    text-decoration: underline; /*agrega subrayado*/
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center; /*alinea verticalmente los elementos*/
+    justify-content: center; /*alinea horizontalmente los elementos*/
+    flex-direction: column; /*los acomoda en una columna*/
+    /* text-align: center; */
+}
+
+.textos-header h1{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.textos-header h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 10;
+}
+
+.wave{
+    position: absolute; /*no conserva espacio en DOM, se puede sobreponer*/
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*****************************************************************
+                            SOBRE NOSOTROS
+/*****************************************************************/
+
+.contenedor-sobre-nosotros{
+    display: flex; /*Seran elementos flexibles*/
+    justify-content:space-evenly; /*Reparta el espacio*/
+}
+.img-sobre-nosotros{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+    padding-left: 15px;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #090165;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); */
+    margin-right: 6px;
+}
+
+.contenido-textos p{
+    padding: 0 0 30px 15px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+
+/*****************************************************************
+                            PORTAFOLIO
+/*****************************************************************/
+
+.portafolio{
+    background: #f2f2f2;
+    padding-top: 30px;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly; /*espaciado uniforme*/
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 31%;
+    margin-bottom: 10px;
+    height: 300px;
+    overflow: hidden;/*si hay desborde qu lo oculte*/
+    position: relative; /*conserva DOM aunque se recorra*/
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+}
+
+/* .imagen-port > img{ */
+.imagen-port img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*La celda se cubre con la imagen*/
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute; /*no conserva su valor en DOM, asi se superpone la imagen*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); /*El tamaño sera cero, y desaparece*/
+    background: #0901657b;
+    transition: transform 0.4s; /*velocidad de transicion*/
+    display: flex;
+    justify-content: center; /*centrar horizontal*/
+    align-items: center; /*centrar vertical*/
+    flex-direction: column;/*poner en una columna los elementos*/
+}
+
+.hover-galeria img{
+    width: 50px;
+    height: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+/* Cuando haya hover en imagen-port, que en galeria pase */
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);/*al tener valor 1 aparece de nuevo y se sobrepone*/
+}
